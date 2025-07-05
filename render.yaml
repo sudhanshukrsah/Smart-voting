@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: voting-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app -c gunicorn.conf.py"
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: SECRET_KEY
+        generateValue: true
+      - key: MAIL_SERVER
+        value: smtp.gmail.com
+      - key: MAIL_PORT
+        value: 587
+      - key: MAIL_USE_TLS
+        value: True
+      # Add your email credentials in Render dashboard:
+      # - key: MAIL_USERNAME
+      #   value: your-email@gmail.com
+      # - key: MAIL_PASSWORD
+      #   value: your-app-password
+
+databases:
+  - name: voting-app-db
+    plan: free
