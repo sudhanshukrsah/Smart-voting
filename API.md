@@ -687,4 +687,4 @@ Import the Postman collection from `docs/postman_collection.json` for easy API t
 
 ---
 
-For more information, contact: sukesh2294@gmail.com
+For more information, contact: sudhanshujii78@gmail.com
