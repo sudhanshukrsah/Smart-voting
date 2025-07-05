@@ -373,8 +373,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Sukesh Kumar** - *Initial work* - [sukesh2294@gmail.com](mailto:sukesh2294@gmail.com)
-- **Sudhanshu Kumar** - *Co-developer* - [sudhanshujii78@gmail.com](mailto:sudhanshujii78@gmail.com)
+- **Sudhanshu Kumar** - *developer* - [sudhanshujii78@gmail.com](mailto:sudhanshujii78@gmail.com)
 
 ## 🙏 Acknowledgments
 
@@ -385,7 +384,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email sukesh2294@gmail.com or create an issue in the GitHub repository.
+For support, email sudhanshujii78@gmail.com or create an issue in the GitHub repository.
 
 ---
 
