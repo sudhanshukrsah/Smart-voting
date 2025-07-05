@@ -163,7 +163,7 @@ smart-voting-system/
 
 If you have questions about contributing:
 - Open an issue with the "question" label
-- Email: sukesh2294@gmail.com
+- Email: sudhanshujii78@gmail.com
 - Check existing issues and pull requests
 
 ## 🙏 Recognition
