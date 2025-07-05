@@ -46,7 +46,7 @@ python --version
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/sudhanshukrsah/Smart-voting.git
+git clone https://github.com/yourusername/Smart-voting.git
 cd smart-voting-system
 ```
 
