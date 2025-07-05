@@ -18,8 +18,8 @@ The Smart Voting System team takes security seriously. We appreciate your effort
 **Please do NOT create a public GitHub issue for security vulnerabilities.**
 
 Instead, please report security vulnerabilities by emailing:
-- **Primary Contact**: sukesh2294@gmail.com
-- **Secondary Contact**: sudhanshujii78@gmail.com
+- **Primary Contact**: sudhanshujii78@gmail.com
+- **Secondary Contact**: sukesh2294@gmail.com
 
 ### What to Include
 
@@ -151,7 +151,7 @@ Security updates will be released as:
 ## Contact Information
 
 For security-related questions or concerns:
-- **Email**: sukesh2294@gmail.com
+- **Email**: sudhanshujii78@gmail.com
 - **Subject Line**: [SECURITY] Brief description
 - **Response Time**: Within 48 hours
 
