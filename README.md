@@ -123,8 +123,8 @@ smart-voting-system/
 
 | Name | Email | Password | Role |
 |------|-------|----------|------|
-| Sukesh Kumar | sukesh2294@gmail.com | admin123 | Super Admin |
-| Sudhanshu Kumar | sudhanshujii78@gmail.com | sudhanshu098 | Admin |
+| Sukesh Kumar | s********@gmail.com | ********** | Admin-1 |
+| Sudhanshu Kumar | s*********@gmail.com | ******** | Admin-2 |
 
 ### 🗳️ Voter Registration Flow
 
