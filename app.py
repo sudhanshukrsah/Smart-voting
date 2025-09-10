@@ -1407,10 +1407,31 @@ def make_election_live(election_id):
 
 @app.route('/end-election/<int:election_id>', methods=['POST'])
 def end_election(election_id):
-    election = Election.query.get(election_id)
-    if election:
+    # Check admin authentication
+    if 'admin_logged_in' not in session:
+        return redirect(url_for('admin_login_step1'))
+    
+    try:
+        election = Election.query.get(election_id)
+        if not election:
+            return redirect(url_for('assigned_election'))
+        
+        # Only allow stopping Live elections
+        if election.status != 'Live':
+            return redirect(url_for('assigned_election'))
+        
+        # Stop the election
         election.status = 'Ended'
         db.session.commit()
+        
+        # Log the action (basic logging to console for now)
+        admin_id = session.get('admin_login', {}).get('admin_id', 'Unknown')
+        print(f"Election {election_id} stopped by admin {admin_id} at {datetime.utcnow()}")
+        
+    except Exception as e:
+        print(f"Error stopping election {election_id}: {e}")
+        db.session.rollback()
+    
     return redirect(url_for('assigned_election'))
 
 # Sedule Voting
