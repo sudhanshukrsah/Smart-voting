@@ -1452,19 +1452,7 @@
             }
         }
 
-        // Auto-update stats (simulate real-time data)
-        setInterval(() => {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            // Simulate minor updates to vote counts
-            statNumbers.forEach((stat, index) => {
-                if (index === 1) { // Votes cast counter
-                    const current = parseInt(stat.textContent);
-                    if (Math.random() > 0.98) { // 2% chance to increment
-                        stat.textContent = current + 1;
-                    }
-                }
-            });
-        }, 10000);
+        // Auto-update stats disabled - showing actual data only
 
         // Welcome animation
         window.addEventListener('load', () => {

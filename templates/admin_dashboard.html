@@ -868,18 +868,7 @@
             });
         }
 
-        // Auto-update stats (simulate real-time data)
-        setInterval(() => {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            statNumbers.forEach((stat, index) => {
-                if (index === 5) { // Total votes counter
-                    const current = parseInt(stat.textContent.replace(',', ''));
-                    if (Math.random() > 0.95) { // 5% chance to increment
-                        stat.textContent = (current + 1).toLocaleString();
-                    }
-                }
-            });
-        }, 5000);
+        // Auto-update stats disabled - showing actual data only
 
         // Generate report and export voting data
         function generateReport() {
