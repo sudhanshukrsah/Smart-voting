@@ -1398,11 +1398,25 @@ def unassign_election(election_id):
 
 @app.route('/make-election-live/<int:election_id>', methods=['POST'])
 def make_election_live(election_id):
-    election = Election.query.get(election_id)
-    if election:
-        election.status = 'Live'
-        election.is_assigned = True 
-        db.session.commit()
+    # Check admin authentication
+    if 'admin_logged_in' not in session:
+        return redirect(url_for('admin_login_step1'))
+    
+    try:
+        election = Election.query.get(election_id)
+        if election and election.status == 'Draft':
+            election.status = 'Live'
+            election.is_assigned = True 
+            db.session.commit()
+            
+            # Log the action
+            admin_id = session.get('admin_login', {}).get('admin_id', 'Unknown')
+            print(f"Election {election_id} made live by admin {admin_id} at {datetime.utcnow()}")
+            
+    except Exception as e:
+        print(f"Error making election live {election_id}: {e}")
+        db.session.rollback()
+    
     return redirect(url_for('assigned_election'))
 
 @app.route('/end-election/<int:election_id>', methods=['POST'])
