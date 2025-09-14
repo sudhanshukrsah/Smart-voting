@@ -1,0 +1,45 @@
+name: Daily Java Code Contribution
+
+on:
+  schedule:
+    # Run daily at 9:00 AM UTC (adjust timezone as needed)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual triggering for testing
+
+jobs:
+  add-daily-java-code:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        
+    - name: Generate daily Java code
+      run: |
+        python scripts/generate_daily_java.py
+        
+    - name: Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+    - name: Commit and push changes
+      run: |
+        git add java-daily-challenges/
+        if [ -n "$(git status --porcelain)" ]; then
+          git commit -m "Daily Java Challenge: $(date +'%Y-%m-%d')"
+          git push
+        else
+          echo "No changes to commit"
+        fi
