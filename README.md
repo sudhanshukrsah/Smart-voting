@@ -125,6 +125,7 @@ smart-voting-system/
 |------|-------|----------|------|
 | Sukesh Kumar | s********@gmail.com | ********** | Admin-1 |
 | Sudhanshu Kumar | s*********@gmail.com | ******** | Admin-2 |
+| sumit kumar | s*********@gmail.com | ******** | Admin-3 |
 
 ### 🗳️ Voter Registration Flow
 
